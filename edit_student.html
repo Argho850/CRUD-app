@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <style>
+        body {
+            background: #f5f7fa;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            background: #fff;
+            max-width: 400px;
+            margin: 60px auto;
+            padding: 32px 28px 24px 28px;
+            border-radius: 10px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+        }
+        h1 {
+            color: #2d3e50;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+        label {
+            display: block;
+            margin-bottom: 6px;
+            color: #34495e;
+            font-weight: bold;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 9px 10px;
+            margin-bottom: 18px;
+            border: 1px solid #bfc9d1;
+            border-radius: 5px;
+            font-size: 15px;
+            background: #f9fafb;
+            transition: border 0.2s;
+        }
+        input[type="text"]:focus {
+            border: 1.5px solid #3498db;
+            outline: none;
+        }
+        .btn {
+            width: 100%;
+            background: #3498db;
+            color: #fff;
+            border: none;
+            padding: 12px 0;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .btn:hover {
+            background: #217dbb;
+        }
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 18px;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.2s;
+        }
+        .back-link:hover {
+            color: #217dbb;
+        }
+    </style>
+    <title>Edit Student</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Edit Student</h1>
+        <form method="post">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" required>
+
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" required>
+
+            <label for="phone">Phone</label>
+            <input type="text" name="phone" id="phone">
+
+            <button type="submit" class="btn">Update Student</button>
+        </form>
+    <a href="{{ url_for('index') }}" class="back-link">← Back to Home</a>
+    </div>
+</body>
+</html>
